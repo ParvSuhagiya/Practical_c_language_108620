@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input"></input>
+    <h1></h1>
+    <button class="btn">CLick to store in local storage</button>
+
+    <script>
+        var input = document.querySelector(".input");
+        var btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", () => {
+            localStorage.setItem("input", input.value);
+
+            document.querySelector("h1").innerHTML = localStorage.getItem("input");
+        });
+    </script>
+</body>
+</html>
